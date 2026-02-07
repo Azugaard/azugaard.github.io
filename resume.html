@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">PORTFOLIO<span style="color:var(--primary)">.</span></a>
+        <div class="nav-toggle"><i class="bi bi-list"></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="resume.html" class="active">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="section" style="padding-top: 8rem; padding-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem;">
+        <div class="section-title" style="margin-bottom: 0; text-align: left;" data-aos="fade-right">
+            <h1>Mon <span class="text-gradient">Parcours</span></h1>
+            <p style="color: var(--gray);">Expériences professionnelles et formation académique.</p>
+        </div>
+        <a href="./assets/CV.pdf" download="CV.pdf" class="btn btn-primary" data-aos="fade-left">
+            <i class="bi bi-download"></i> Télécharger le CV
+        </a>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="grid" style="align-items: start;">
+            
+            <!-- Experience -->
+            <div data-aos="fade-up">
+                <h2 style="color: var(--primary); margin-bottom: 2rem;"><i class="bi bi-briefcase"></i> Expérience</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Oct 2025 - Présent</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Ingénieur Logiciel IA</h3>
+                                <div style="font-weight: 600; color: var(--gray); margin-bottom: 1rem;">Adservio (Paris)</div>
+                                <p>Développement de logiciels augmentés et intégration de solutions d'Intelligence Artificielle pour optimiser les processus métiers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: var(--secondary);"></div>
+                        <div class="timeline-date">Juin 2025 - Juil 2025</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Développeur Logiciels</h3>
+                                <div style="font-weight: 600; color: var(--gray); margin-bottom: 1rem;">Université de Montpellier</div>
+                                <p>Conception et développement de <strong>GESTIMAT</strong>, un logiciel de gestion de matériel et de demandes de prêts pour le département informatique.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: var(--secondary);"></div>
+                        <div class="timeline-date" style="color: var(--secondary);">2021 - 2022</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Créateur E-commerce</h3>
+                                <div style="font-weight: 600; color: var(--gray); margin-bottom: 1rem;">Freelance</div>
+                                <p>Développement de boutiques Shopify et WooCommerce. Personnalisation de thèmes et optimisation UX.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div data-aos="fade-up" style="transition-delay: 0.2s">
+                <h2 style="color: var(--secondary); margin-bottom: 2rem;"><i class="bi bi-mortarboard"></i> Formation</h2>
+                <div class="timeline" style="border-color: var(--secondary);">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: var(--secondary); border-color: white;"></div>
+                        <div class="timeline-date">2025 - 2027</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Master en Génie Logiciel</h3>
+                                <div style="font-weight: 600; color: var(--gray); margin-bottom: 1rem;">Université de Montpellier</div>
+                                <p>Spécialisation en architecture logicielle, développement avancé et intégration système.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: var(--secondary); border-color: white;"></div>
+                        <div class="timeline-date">2023 - 2025</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Licence Informatique</h3>
+                                <div style="font-weight: 600; color: var(--gray); margin-bottom: 1rem;">Université de Montpellier</div>
+                                <p>Approfondissement en développement logiciel, technologies web et bases de données.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot" style="background: var(--secondary); border-color: white;"></div>
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Licence Informatique</h3>
+                                <div style="font-weight: 600; color: var(--gray); margin-bottom: 1rem;">UPVD (Perpignan)</div>
+                                <p>Acquisition des fondamentaux en programmation (C, Java) et développement web.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills & Certifications -->
+    <section class="section bg-white" style="border-radius: var(--radius); margin-bottom: 4rem;" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Compétences & <span class="text-gradient">Certifications</span></h2>
+        </div>
+        
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Domaines d'Expertise</h4>
+                <div>
+                    <span class="tag">Génie Logiciel</span>
+                    <span class="tag">Intelligence Artificielle</span>
+                    <span class="tag">Gestion de Projet</span>
+                    <span class="tag">Gestion d'équipe</span>
+                    <span class="tag">Développement Fullstack</span>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Tech Stack</h4>
+                <div>
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">JavaScript/React</span>
+                    <span class="tag">Git/GitHub</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">C</span>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="margin-bottom: 1.5rem;">Certifications</h4>
+                <ul style="list-style: none; padding-left: 0; color: var(--gray);">
+                    <li style="margin-bottom: 0.5rem;"><i class="bi bi-check-circle-fill text-gradient"></i> Gestion de projet Agile</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="bi bi-check-circle-fill text-gradient"></i> L'IA pour les débutants</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="bi bi-check-circle-fill text-gradient"></i> Claude Code in Action</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Adechi Adeboye Marie-Charles. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/modern-script.js"></script>
+</body>
+</html>

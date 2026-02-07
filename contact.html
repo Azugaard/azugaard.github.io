@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">PORTFOLIO<span style="color:var(--primary)">.</span></a>
+        <div class="nav-toggle"><i class="bi bi-list"></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projects.html">Projets</a></li>
+            <li><a href="resume.html">CV</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="section" style="padding-top: 8rem; text-align: center;">
+        <div class="section-title" data-aos="fade-up">
+            <h1>Contactez-<span class="text-gradient">Moi</span></h1>
+            <p style="color: var(--gray);">Vous avez un projet ou une opportunité ? N'hésitez pas à m'écrire.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="form-container" data-aos="fade-up" style="transition-delay: 0.1s">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true">
+                <!-- Champ caché requis par Netlify pour identifier le formulaire -->
+                <input type="hidden" name="form-name" value="contact">
+                
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input class="form-control" id="name" name="name" type="text" placeholder="Votre nom" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse Email</label>
+                    <input class="form-control" id="email" name="email" type="email" placeholder="charlesadechi@gmail.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="06 12 34 56 78" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="Comment puis-je vous aider ?" required></textarea>
+                </div>
+
+                <button class="btn btn-primary" id="submitButton" type="submit" style="width: 100%; margin-top: 1rem;">
+                    Envoyer le message <i class="bi bi-send"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section" style="text-align: center;" data-aos="fade-up">
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+            <div>
+                <i class="bi bi-envelope text-gradient" style="font-size: 2rem;"></i>
+                <p style="margin-top: 0.5rem; font-weight: 600;">Email</p>
+            </div>
+            <div>
+                <i class="bi bi-linkedin text-gradient" style="font-size: 2rem;"></i>
+                <p style="margin-top: 0.5rem; font-weight: 600;">LinkedIn</p>
+            </div>
+            <div>
+                <i class="bi bi-github text-gradient" style="font-size: 2rem;"></i>
+                <p style="margin-top: 0.5rem; font-weight: 600;">GitHub</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Adechi Adeboye Marie-Charles. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/modern-script.js"></script>
+</body>
+</html>
