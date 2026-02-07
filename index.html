@@ -1,88 +1,136 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Adechi Adeboye Marie-Charles</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/modern-style.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-</head>
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="index.html" class="logo">PORTFOLIO<span style="color:var(--primary)">.</span></a>
-        
-        <div class="nav-toggle">
-            <i class="bi bi-list"></i>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="projects.html">Projets</a></li>
-            <li><a href="resume.html">CV</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-up">
-                <span class="hero-badge">Ingénieur Logiciel IA & Étudiant Master</span>
-                <h1>Développeur de <br><span class="text-gradient">Logiciels Augmentés</span></h1>
-                <p>Je m'appelle Adechi Adeboye Marie-Charles. Ingénieur Logiciel IA chez Adservio et étudiant en Génie Logiciel, je conçois des solutions intelligentes alliant développement robuste et Intelligence Artificielle.</p>
-                
-                <div class="btn-group">
-                    <a href="projects.html" class="btn btn-primary">Voir mes projets <i class="bi bi-arrow-right-short"></i></a>
-                    <a href="resume.html" class="btn btn-outline">Mon Parcours</a>
-                </div>
-            </div>
-
-            <div class="hero-img" data-aos="fade-up" style="transition-delay: 0.2s">
-                <div class="profile-blob">
-                    <img src="assets/profile.png" alt="Adechi Adeboye Marie-Charles">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="section-title" data-aos="fade-up">
-            <h2>À propos de <span class="text-gradient">Moi</span></h2>
-        </div>
-        
-        <div class="card" data-aos="fade-up">
-            <div class="card-body" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: var(--dark);">
-                    Actuellement Ingénieur Logiciel IA chez <strong>Adservio</strong> et étudiant en Master Génie Logiciel à l'Université de Montpellier, je me spécialise dans le développement de "logiciels augmentés". Mon expertise couvre le développement full-stack, l'intégration d'IA (LLMs, RAG) et la gestion de projets techniques complexes comme GESTIMAT ou CALEA.
-                </p>
-                
-                <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1.5rem; font-size: 2rem;">
-                    <a href="https://www.linkedin.com/in/adéboyé-marie-charles-a-41a034220" target="_blank" class="text-gradient"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/carlimma" target="_blank" class="text-gradient"><i class="bi bi-github"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Adechi Adeboye Marie-Charles. Tous droits réservés.</p>
-    </footer>
-
-    <!-- Script -->
-    <script src="js/modern-script.js"></script>
-</body>
-</html>
+diff --git a/index.html b/index.html
+index 7147da066aa9951491c3ed3069110d4ee53a9f06..bcb150a7f5f9d3ab32878f31a73fe044713e49f0 100644
+--- a/index.html
++++ b/index.html
+@@ -55,34 +55,129 @@
+                 </div>
+             </div>
+         </div>
+     </header>
+ 
+     <!-- About Section -->
+     <section class="section" id="about">
+         <div class="section-title" data-aos="fade-up">
+             <h2>À propos de <span class="text-gradient">Moi</span></h2>
+         </div>
+         
+         <div class="card" data-aos="fade-up">
+             <div class="card-body" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                 <p style="font-size: 1.1rem; color: var(--dark);">
+                     Actuellement Ingénieur Logiciel IA chez <strong>Adservio</strong> et étudiant en Master Génie Logiciel à l'Université de Montpellier, je me spécialise dans le développement de "logiciels augmentés". Mon expertise couvre le développement full-stack, l'intégration d'IA (LLMs, RAG) et la gestion de projets techniques complexes comme GESTIMAT ou CALEA.
+                 </p>
+                 
+                 <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1.5rem; font-size: 2rem;">
+                     <a href="https://www.linkedin.com/in/adéboyé-marie-charles-a-41a034220" target="_blank" class="text-gradient"><i class="bi bi-linkedin"></i></a>
+                     <a href="https://github.com/carlimma" target="_blank" class="text-gradient"><i class="bi bi-github"></i></a>
+                 </div>
+             </div>
+         </div>
+     </section>
+ 
++    <!-- Projects Preview Section -->
++    <section class="section" id="projects">
++        <div class="section-title" data-aos="fade-up">
++            <h2>Mes <span class="text-gradient">Projets</span></h2>
++            <p style="color: var(--gray); max-width: 640px; margin: 0 auto;">
++                Une sélection de projets qui illustrent mon expertise en IA, développement web et logiciels métiers.
++            </p>
++        </div>
++
++        <div class="grid">
++            <article class="card" data-aos="fade-up">
++                <img src="./assets/calea.png" alt="CALEA Audit IA" class="card-img">
++                <div class="card-body">
++                    <div style="margin-bottom: 1rem;">
++                        <span class="tag">Python/AI</span>
++                        <span class="tag">SaaS</span>
++                        <span class="tag">2025</span>
++                    </div>
++                    <h3>CALEA - Audit IA</h3>
++                    <p>Plateforme d'audit et de tests automatisés avec LLMs, déployée en SaaS et Desktop.</p>
++                    <a href="projects.html" class="btn btn-outline" style="width: 100%;">Voir le projet</a>
++                </div>
++            </article>
++
++            <article class="card" data-aos="fade-up" style="transition-delay: 0.1s">
++                <img src="./assets/gestimat.png" alt="GESTIMAT" class="card-img">
++                <div class="card-body">
++                    <div style="margin-bottom: 1rem;">
++                        <span class="tag">Gestion</span>
++                        <span class="tag">Université</span>
++                        <span class="tag">2025</span>
++                    </div>
++                    <h3>GESTIMAT</h3>
++                    <p>Logiciel de gestion de matériel et de demandes de prêt pour le département informatique.</p>
++                    <a href="projects.html" class="btn btn-outline" style="width: 100%;">Voir le projet</a>
++                </div>
++            </article>
++
++            <article class="card" data-aos="fade-up" style="transition-delay: 0.2s">
++                <img src="./assets/Capture.jpg" alt="Sezy Site Vitrine" class="card-img">
++                <div class="card-body">
++                    <div style="margin-bottom: 1rem;">
++                        <span class="tag">Web</span>
++                        <span class="tag">Freelance</span>
++                        <span class="tag">2024</span>
++                    </div>
++                    <h3>Sezy - Site Vitrine</h3>
++                    <p>Site de présentation sur mesure avec personnalisation de template et optimisation UX.</p>
++                    <a href="projects.html" class="btn btn-outline" style="width: 100%;">Voir le projet</a>
++                </div>
++            </article>
++        </div>
++
++        <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
++            <a href="projects.html" class="btn btn-primary">Découvrir tous mes projets <i class="bi bi-arrow-right-short"></i></a>
++        </div>
++    </section>
++
++    <!-- CV Section -->
++    <section class="section bg-white" id="resume" style="border-radius: var(--radius); margin-bottom: 4rem;">
++        <div class="section-title" data-aos="fade-up">
++            <h2>Mon <span class="text-gradient">CV</span></h2>
++            <p style="color: var(--gray); max-width: 640px; margin: 0 auto;">
++                Découvrez mon parcours académique et professionnel, ainsi que mes compétences clés.
++            </p>
++        </div>
++
++        <div class="grid" style="align-items: stretch;">
++            <div class="card" data-aos="fade-up">
++                <div class="card-body">
++                    <h3>Expérience & Formation</h3>
++                    <p>Ingénieur Logiciel IA chez Adservio et étudiant en Master Génie Logiciel à Montpellier.</p>
++                    <ul style="list-style: none; padding-left: 0; color: var(--gray);">
++                        <li style="margin-bottom: 0.5rem;"><i class="bi bi-briefcase"></i> IA appliquée & logiciels augmentés</li>
++                        <li style="margin-bottom: 0.5rem;"><i class="bi bi-mortarboard"></i> Génie logiciel & architecture</li>
++                        <li><i class="bi bi-diagram-3"></i> Gestion de projets techniques</li>
++                    </ul>
++                </div>
++            </div>
++
++            <div class="card" data-aos="fade-up" style="transition-delay: 0.1s">
++                <div class="card-body">
++                    <h3>Téléchargement du CV</h3>
++                    <p>Version PDF complète avec mes compétences, expériences et formations détaillées.</p>
++                    <a href="./assets/CV.pdf" download="CV.pdf" class="btn btn-primary" style="width: 100%;">
++                        <i class="bi bi-download"></i> Télécharger le CV
++                    </a>
++                    <a href="resume.html" class="btn btn-outline" style="width: 100%; margin-top: 0.75rem;">
++                        Voir le détail du parcours
++                    </a>
++                </div>
++            </div>
++        </div>
++    </section>
++
+     <!-- Footer -->
+     <footer>
+         <p>&copy; 2024 Adechi Adeboye Marie-Charles. Tous droits réservés.</p>
+     </footer>
+ 
+     <!-- Script -->
+     <script src="js/modern-script.js"></script>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
