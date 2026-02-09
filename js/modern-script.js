@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // --- FONCTION GITHUB AUTO-LOAD ---
     async function fetchGitHubProjects() {
-        const username = 'carlimma'; // Ton pseudo GitHub
+        const username = 'Azugaard'; // Ton pseudo GitHub
         const container = document.getElementById('github-projects');
         
         if (!container) return; // Sécurité si on n'est pas sur la page projets
