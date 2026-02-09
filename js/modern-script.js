@@ -1,5 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Navigation Toggle
+    
+    // --- FONCTION GITHUB AUTO-LOAD ---
+    async function fetchGitHubProjects() {
+        const username = 'carlimma'; // Ton pseudo GitHub
+        const container = document.getElementById('github-projects');
+        
+        if (!container) return; // Sécurité si on n'est pas sur la page projets
+
+        try {
+            // On récupère les 6 derniers dépôts modifiés
+            const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+            const repos = await response.json();
+
+            container.innerHTML = repos.map(repo => `
+                <article class="card" data-aos="fade-up">
+                    <div class="card-body">
+                        <div style="margin-bottom: 1rem;">
+                            <span class="tag">${repo.language || 'Code'}</span>
+                            <span class="tag"><i class="bi bi-star-fill"></i> ${repo.stargazers_count}</span>
+                        </div>
+                        <h3>${repo.name.replace(/-/g, ' ')}</h3>
+                        <p>${repo.description || 'Projet passionnant à découvrir sur mon GitHub.'}</p>
+                        <a href="${repo.html_url}" target="_blank" class="btn btn-outline" style="width: 100%">
+                            Voir le Code <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </article>
+            `).join('');
+
+            // On réactive l'observateur d'animation pour les nouveaux éléments
+            const animatedElements = container.querySelectorAll('[data-aos]');
+            animatedElements.forEach(el => observer.observe(el));
+
+        } catch (error) {
+            container.innerHTML = `<p style="text-align: center; grid-column: 1/-1;">Erreur lors du chargement des projets. <a href="https://github.com/carlimma">Visitez mon profil GitHub</a>.</p>`;
+            console.error("Erreur GitHub:", error);
+        }
+    }
+
+    // Appeler la fonction au chargement
+    fetchGitHubProjects();
+
+
+    // --- MOBILE NAVIGATION TOGGLE ---
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -17,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll Animation (Simple AOS replacement)
+    // --- SCROLL ANIMATION (AOS) ---
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -27,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
@@ -35,18 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('[data-aos]');
     animatedElements.forEach(el => observer.observe(el));
 
-    // AJAX Form Submission for Netlify
+    // --- FORM SUBMISSION ---
     const contactForm = document.querySelector('form[name="contact"]');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
             const myForm = e.target;
             const formData = new FormData(myForm);
             const submitBtn = myForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
 
-            // Feedback visuel pendant l'envoi
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Envoi en cours...';
 
@@ -73,16 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth Scroll for anchor links
+    // --- SMOOTH SCROLL ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
+                target.scrollIntoView({ behavior: 'smooth' });
                 if (navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                     navToggle.querySelector('i').classList.replace('bi-x-lg', 'bi-list');
