@@ -5,60 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maxime Roche – Portfolio</title>
   <meta name="description" content="Élève ingénieur en 2e année à l'ENSEEIHT (Architecture Systèmes et Réseaux), à la recherche d'un stage en sécurité pour l'été 2027.">
+  <meta name="color-scheme" content="dark light">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
   <header class="top">
-    <a class="brand" href="#">Maxime Roche</a>
+    <a class="brand" href="#" aria-label="Maxime Roche, haut de page"><span class="prompt">&gt;_</span> maxime.roche</a>
     <nav aria-label="Navigation principale">
-      <a href="#projets">Projets</a>
-      <a href="#parcours">Parcours</a>
-      <a href="#competences">Compétences</a>
-      <a href="#contact">Contact</a>
+      <a href="#projets">projets</a>
+      <a href="#parcours">parcours</a>
+      <a href="#competences">compétences</a>
+      <a href="#contact">contact</a>
     </nav>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="hero">
-      <p class="eyebrow">Élève ingénieur · ENSEEIHT · Toulouse</p>
-      <h1>Architecture systèmes et réseaux, avec un intérêt pour la sécurité.</h1>
-      <p class="lead">
-        Je suis en 2<sup>e</sup> année à l'ENSEEIHT, parcours Architecture Systèmes et Réseaux.
-        Je recherche un stage de 2 à 3 mois pour l'été 2027, en France ou à l'étranger, en sécurité des
-        systèmes et réseaux, sécurité cloud / DevSecOps ou GRC.
-      </p>
-      <p class="actions">
-        <a class="btn" href="#projets">Voir mes projets</a>
-        <a class="btn ghost" href="#contact">Me contacter</a>
-      </p>
+      <div class="hero-text">
+        <p class="eyebrow">Élève ingénieur · ENSEEIHT · Toulouse</p>
+        <h1>Systèmes, réseaux<br><span class="accent">et sécurité.</span></h1>
+        <p class="lead">
+          Je suis en 2<sup>e</sup> année à l'ENSEEIHT, parcours Architecture Systèmes et Réseaux.
+          Je recherche un stage de 2 à 3 mois pour l'été 2027, en France ou à l'étranger.
+        </p>
+        <p class="actions">
+          <a class="btn" href="#projets">Voir mes projets</a>
+          <a class="btn ghost" href="#contact">Me contacter</a>
+        </p>
+      </div>
+
+      <div class="terminal" role="img" aria-label="Fenêtre de terminal : whoami, objectif et domaines recherchés">
+        <div class="bar"><i></i><i></i><i></i><span>~/portfolio</span></div>
+        <pre><span class="ps">$</span> whoami
+<span class="out">Maxime Roche, élève ingénieur (ASR)</span>
+<span class="ps">$</span> cat objectif.txt
+<span class="out">stage 2 à 3 mois · été 2027
+France ou étranger</span>
+<span class="ps">$</span> ls domaines/
+<span class="out dir">securite-systemes-reseaux/
+securite-cloud-devsecops/
+grc/</span>
+<span class="ps">$</span> <span class="cursor"></span></pre>
+      </div>
     </section>
 
     <section id="projets">
-      <h2>Projets</h2>
+      <h2><span class="idx">01</span> Projets</h2>
       <div class="cards">
-        <article class="card">
+        <a class="card" href="https://github.com/Azugaard/ProjetL2">
+          <span class="kicker">Projet de groupe · 5 personnes</span>
           <h3>Jeux multijoueurs en ligne</h3>
-          <p class="meta">Projet de groupe (5 personnes) · Python, Flask-SocketIO, JavaScript</p>
-          <p>Jeux en client/serveur temps réel, dont « Mot le plus long » jouable en terminal et sur le web, et Opti'Mot. Travail d'équipe sur un dépôt Git partagé (plus de 500 commits).</p>
-          <a href="https://github.com/Azugaard/ProjetL2">Voir sur GitHub →</a>
-        </article>
-        <article class="card">
+          <p>Jeux en client/serveur temps réel, dont « Mot le plus long » en terminal et sur le web, et Opti'Mot. Dépôt Git partagé de plus de 500 commits.</p>
+          <ul class="tags"><li>Python</li><li>Flask-SocketIO</li><li>JavaScript</li><li>Git</li></ul>
+          <span class="go">Voir sur GitHub →</span>
+        </a>
+        <a class="card" href="https://github.com/Azugaard/Projet-Pilotage-Geste">
+          <span class="kicker">Vision par ordinateur</span>
           <h3>Pilotage de diapositives par gestes</h3>
-          <p class="meta">Python, MediaPipe, OpenCV, PyAutoGUI</p>
-          <p>Suivi de la main par webcam : un mouvement du poignet change de diapositive, et un second mode déplace le curseur avec l'index.</p>
-          <a href="https://github.com/Azugaard/Projet-Pilotage-Geste">Voir sur GitHub →</a>
-        </article>
-        <article class="card">
+          <p>Suivi de la main par webcam : un mouvement du poignet change de diapositive, un second mode déplace le curseur avec l'index.</p>
+          <ul class="tags"><li>Python</li><li>MediaPipe</li><li>OpenCV</li><li>PyAutoGUI</li></ul>
+          <span class="go">Voir sur GitHub →</span>
+        </a>
+        <a class="card" href="https://github.com/Azugaard/ExtensionVSCodeMarkdown">
+          <span class="kicker">Extension VS Code</span>
           <h3>Markdown Visualizer</h3>
-          <p class="meta">Extension VS Code · JavaScript</p>
           <p>Aperçu de documents Markdown avec diagrammes Mermaid et formules KaTeX, export PDF et bibliothèque de modèles.</p>
-          <a href="https://github.com/Azugaard/ExtensionVSCodeMarkdown">Voir sur GitHub →</a>
-        </article>
+          <ul class="tags"><li>JavaScript</li><li>API VS Code</li><li>Mermaid</li><li>KaTeX</li></ul>
+          <span class="go">Voir sur GitHub →</span>
+        </a>
+        <div class="card soon" aria-label="Projet à venir">
+          <span class="kicker">À venir</span>
+          <h3>Homelab sécurité</h3>
+          <p>Réseau virtuel segmenté avec pare-feu OPNsense, serveur Linux durci, puis attaques et détection. Documenté pas à pas.</p>
+          <ul class="tags"><li>OPNsense</li><li>Debian</li><li>fail2ban</li></ul>
+        </div>
       </div>
     </section>
 
     <section id="parcours">
-      <h2>Parcours</h2>
+      <h2><span class="idx">02</span> Parcours</h2>
       <ol class="timeline">
         <li>
           <span class="when">Août 2026 – Juin 2028</span>
@@ -72,33 +99,47 @@
         </li>
         <li>
           <span class="when">Août – Sept. 2024</span>
-          <strong>Université de Montpellier – tuteur d'accueil et de visite</strong>
+          <strong>Tuteur d'accueil et de visite, Université de Montpellier</strong>
           <span>Accompagnement d'une centaine d'étudiants lors de la rentrée sur le campus Triolet.</span>
         </li>
       </ol>
     </section>
 
     <section id="competences">
-      <h2>Compétences</h2>
-      <dl class="skills">
-        <div><dt>Langages</dt><dd>Python, JavaScript, C, SQL</dd></div>
-        <div><dt>Web et réseau</dt><dd>Node.js, Express, Flask, Socket.IO (WebSockets), HTML / CSS</dd></div>
-        <div><dt>Outils et méthodes</dt><dd>Git, UML, méthodes agiles, OpenCV / MediaPipe</dd></div>
-        <div><dt>Langues</dt><dd>Français, Anglais (B2)</dd></div>
-      </dl>
+      <h2><span class="idx">03</span> Compétences</h2>
+      <div class="skills">
+        <div>
+          <h3>Langages</h3>
+          <ul class="tags"><li>Python</li><li>JavaScript</li><li>C</li><li>SQL</li></ul>
+        </div>
+        <div>
+          <h3>Web et réseau</h3>
+          <ul class="tags"><li>Node.js</li><li>Express</li><li>Flask</li><li>Socket.IO</li><li>WebSockets</li><li>HTML / CSS</li></ul>
+        </div>
+        <div>
+          <h3>Outils et méthodes</h3>
+          <ul class="tags"><li>Git</li><li>UML</li><li>Méthodes agiles</li><li>OpenCV</li><li>MediaPipe</li></ul>
+        </div>
+        <div>
+          <h3>Langues</h3>
+          <ul class="tags"><li>Français</li><li>Anglais B2</li></ul>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Le plus simple est de m'écrire.</p>
+      <h2><span class="idx">04</span> Contact</h2>
+      <p class="lead">Un stage, une question, un conseil : le plus simple est de m'écrire.</p>
+      <p class="actions">
+        <a class="btn" href="mailto:maxime.roche@etu.toulouse-inp.fr">maxime.roche@etu.toulouse-inp.fr</a>
+      </p>
       <ul class="links">
-        <li><a href="mailto:maxime.roche@etu.toulouse-inp.fr">maxime.roche@etu.toulouse-inp.fr</a></li>
         <li><a href="https://www.linkedin.com/in/maxime-roche-0b6844314">LinkedIn</a></li>
         <li><a href="https://github.com/Azugaard">GitHub</a></li>
       </ul>
     </section>
   </main>
 
-  <footer>© 2026 Maxime Roche</footer>
+  <footer>© 2026 Maxime Roche · Toulouse</footer>
 </body>
 </html>
